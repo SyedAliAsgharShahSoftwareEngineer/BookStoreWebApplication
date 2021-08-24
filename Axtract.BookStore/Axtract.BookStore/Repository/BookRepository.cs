@@ -35,6 +35,7 @@ namespace Axtract.BookStore.Repository
                 new BookModel(){Id=5, Title="VB", Author="Zainab"},
                 new BookModel(){Id=6, Title="Python", Author="Sadia"},
                 new BookModel(){Id=7, Title="OOP", Author="Nighat"},
+                new BookModel(){Id=8, Title="C++", Author="Ali"},
             };
         }
     }
