@@ -8,9 +8,14 @@ namespace Axtract.BookStore.Controllers
 {
     public class HomeController : Controller
     {
-        public string Index()
+        public ViewResult Index()
         {
-            return "Shah ji";
+            return View();
+        }
+
+        public ViewResult AboutUS()
+        {
+            return View();
         }
     }
 }
