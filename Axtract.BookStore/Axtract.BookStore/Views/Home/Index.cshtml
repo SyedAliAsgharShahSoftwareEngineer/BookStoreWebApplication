@@ -6,10 +6,11 @@
 <head>
     <meta name="Viewport" content="width=device-width" />
     <title>Index</title>
+    <link href="~/css/logo.css" rel="stylesheet" />
 </head>
 <body>
     <h1>Welcome to Book Store Application</h1>
-    <h2>@DateTime.Now</h2>
+    @*<h2>@DateTime.Now</h2>
     <p>This is the home page of our Book store Web Application. You can easily get all the books from here. Thanks!</p>
 
     <h1>Sum = @(3 + 5)</h1>
@@ -26,10 +27,62 @@
 
     <h2>My Email - aliasgharsoftwareengineer@gmail.com</h2>
     <h2>//escape sequence</h2>
-    <h2>Twitter Account - @@aliasgharsoftwareengineer.com</h2> 
-
+    <h2>Twitter Account - @@aliasgharsoftwareengineer.com</h2>*@  
     
+    @*@{
+        int a= 10;
+    }
 
+    @if(a < 5)
+    {
+        a++;
+        <h1>Hello from the if -> block and the value of a = @a</h1>
+    }
+    else if(a == 10)
+    {
+        <h1>Hello from the else if -> block.The value of a is @a</h1>
+    }
+    else
+    {
+        <h1>Hello from the -> else block of the web store application</h1>
+    }*@
+
+    @*<h1>Ternary Opertaors - (write condition) then add ? if true this part shown other wise we add colon
+    : and the value will be here will displayed </h1>
+
+    @{
+        int a = 9;
+        int b= 0;
+    }
     
+    <h1> Ternary - @(a == 10 ? b = 10 : b = 5)</h1>
+
+    <h1> The Value of b = @b</h1>*@
+
+    <h1> Switch Statement </h1>
+
+    @{
+        int a = 1;
+    }
+    
+    @switch (a)
+    {   case 1:
+              <h1> I am from case 1 </h1>
+              break;
+        case 2:
+              <h1> I am from case 2 </h1>
+              break;
+        case 3:
+              <h1> I am from case 3 </h1>
+              break;
+        case 4:
+              <h1> I am from case 4 </h1>
+              break;
+        default: 
+              <h1> I am from the default</h1>
+              break;
+    }
+    <img src = "~/images/Logo.png " class="logo" alt="Logo"/>
+    <img src="~/MyDummyStaticFiles/dummy.png" alt="dummy"/>
 </body>
 </html>
