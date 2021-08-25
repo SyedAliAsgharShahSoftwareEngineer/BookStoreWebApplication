@@ -7,9 +7,10 @@
     <meta name="Viewport" content="width=device-width" />
     <title>Index</title>
     <link href="~/css/logo.css" rel="stylesheet" />
+    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
 </head>
-<body>
-    <h1>Welcome to Book Store Application</h1>
+<body class="container">
+    <h1 class="h1">Welcome to Book Store Application</h1>
     @*<h2>@DateTime.Now</h2>
     <p>This is the home page of our Book store Web Application. You can easily get all the books from here. Thanks!</p>
 
@@ -59,7 +60,7 @@
 
     <h1> The Value of b = @b</h1>*@
 
-    <h1> Switch Statement </h1>
+    @*<h1> Switch Statement </h1>
 
     @{
         int a = 1;
@@ -81,8 +82,22 @@
         default: 
               <h1> I am from the default</h1>
               break;
-    }
+    }*@
+
+    <h1>Image tag</h1>
     <img src = "~/images/Logo.png " class="logo" alt="Logo"/>
-    <img src="~/MyDummyStaticFiles/dummy.png" alt="dummy"/>
+    @*<img src="~/MyDummyStaticFiles/dummy.png" alt="dummy"/>*@
+
+    <input type="button" value="Click me" class="btn btn-primary" />
+
+    <script src="~/lib/jquery/jquery.js"></script>
 </body>
 </html>
+
+
+<script>
+    $(document).ready(function(){
+            alert('Page Loaded');
+    });
+
+</script>

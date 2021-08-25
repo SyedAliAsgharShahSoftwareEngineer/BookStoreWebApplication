@@ -29,12 +29,12 @@ namespace Axtract.BookStore
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
-            app.UseStaticFiles(new StaticFileOptions()
-            {
-                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),
-                "MyDummyStaticFiles")),
-                RequestPath = "/MyDummyStaticFiles"
-            });
+            //app.UseStaticFiles(new StaticFileOptions()
+            //{
+            //    FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(),
+            //    "MyDummyStaticFiles")),
+            //    RequestPath = "/MyDummyStaticFiles"
+            //});
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
