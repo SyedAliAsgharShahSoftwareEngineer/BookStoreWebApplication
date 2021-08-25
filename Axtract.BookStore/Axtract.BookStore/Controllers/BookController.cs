@@ -11,6 +11,11 @@ namespace Axtract.BookStore.Controllers
     public class BookController : Controller
     {
         private readonly BookRepository _bookRepository = null;
+
+        public ViewResult ContactUs()
+        {
+            return View();
+        }
         public BookController()
         {
             _bookRepository = new BookRepository();
