@@ -11,6 +11,7 @@ namespace Axtract.BookStore.Controllers
         public ViewResult Index()
         {
             return View();
+            //return View("TempView/AliTempView.cshtml"); for other view
         }
 
         public ViewResult AboutUS()

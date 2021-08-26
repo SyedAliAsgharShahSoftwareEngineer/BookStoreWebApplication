@@ -1,104 +1,91 @@
 ﻿@{
-    Layout = null;
+    Layout = "_Layout";
 }
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="Viewport" content="width=device-width" />
-    <title>Index</title>
-    <link href="~/css/logo.css" rel="stylesheet" />
-    <link href="~/lib/twitter-bootstrap/css/bootstrap.css" rel="stylesheet" />
-</head>
-<body class="container">
-    <h1 class="h1">Welcome to Book Store Websites.</h1>
-    <h1 class="h1">Message should be updated.</h1>
-    @*<h2>@DateTime.Now</h2>
-    <p>This is the home page of our Book store Web Application. You can easily get all the books from here. Thanks!</p>
 
-    <h1>Sum = @(3 + 5)</h1>
-    <h1>Multiline Syntax</h1>
-    
-   @{
-    int a = 10;
-    int b = 20;
-    int c= 30;
-    int d= a+b+c;
-    }
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1>Welcome to BookStore</h1>
+        <p class="lead text-muted">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+            molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+            numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
+            optio, eaque rerum! Provident similique accusantium nemo autem.</p>
 
-    <h1>@d</h1>
+        <p>
+            <a href="#" class="btn btn-primary my-2">Search Book</a>
+        </p>
+    </div>
+</section>
 
-    <h2>My Email - aliasgharsoftwareengineer@gmail.com</h2>
-    <h2>//escape sequence</h2>
-    <h2>Twitter Account - @@aliasgharsoftwareengineer.com</h2>*@  
-    
-    @*@{
-        int a= 10;
-    }
+<<div class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="~/images/Logo.png" class="card-img-top" alt="Logo">
+                    <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">        
+                            <div class="btn-group">
+                               <a href="#" class="btn btn-sm btn-outline-secondary">View Detail</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="~/images/Logo.png" class="card-img-top" alt="Logo">
+                    <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">        
+                            <div class="btn-group">
+                               <a href="#" class="btn btn-sm btn-outline-secondary">View Detail</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="~/images/Logo.png" class="card-img-top" alt="Logo">
+                    <div class="card-body">
+                       <h5 class="card-title">Card title</h5>
+                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <div class="d-flex justify-content-between align-items-center">        
+                            <div class="btn-group">
+                               <a href="#" class="btn btn-sm btn-outline-secondary">View Detail</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>
+                 </div>
+             </div>
+        </div>
+    </div>
+</div>
 
-    @if(a < 5)
-    {
-        a++;
-        <h1>Hello from the if -> block and the value of a = @a</h1>
-    }
-    else if(a == 10)
-    {
-        <h1>Hello from the else if -> block.The value of a is @a</h1>
-    }
-    else
-    {
-        <h1>Hello from the -> else block of the web store application</h1>
-    }*@
-
-    @*<h1>Ternary Opertaors - (write condition) then add ? if true this part shown other wise we add colon
-    : and the value will be here will displayed </h1>
-
-    @{
-        int a = 9;
-        int b= 0;
-    }
-    
-    <h1> Ternary - @(a == 10 ? b = 10 : b = 5)</h1>
-
-    <h1> The Value of b = @b</h1>*@
-
-    @*<h1> Switch Statement </h1>
-
-    @{
-        int a = 1;
-    }
-    
-    @switch (a)
-    {   case 1:
-              <h1> I am from case 1 </h1>
-              break;
-        case 2:
-              <h1> I am from case 2 </h1>
-              break;
-        case 3:
-              <h1> I am from case 3 </h1>
-              break;
-        case 4:
-              <h1> I am from case 4 </h1>
-              break;
-        default: 
-              <h1> I am from the default</h1>
-              break;
-    }*@
-
-    <h1>Image tag</h1>
-    <img src = "~/images/Logo.png " class="logo" alt="Logo"/>
-    @*<img src="~/MyDummyStaticFiles/dummy.png" alt="dummy"/>*@
-
-    <input type="button" value="Click me" class="btn btn-primary" />
-
-    <script src="~/lib/jquery/jquery.js"></script>
-</body>
-</html>
-
-
-<script>
-    $(document).ready(function(){
-            //alert('Page Loaded');
-    });
-
-</script>
+@*<div class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <svg class="bd-Placeholder-img card-img-top" width="100%" height="225" xmlns="#" />
+                    <div class="card-body">
+                        <p class="card-text">This section will be used to display the short description of book</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <a href="#" class="btn btn-sm btn-outline-secondary">View Detail</a>
+                            </div>
+                            <small class="text-muted">Author Name</small>
+                        </div>
+                    </div>    
+                 </div>
+            </div>    
+         </div>
+    </div>
+</div>*@

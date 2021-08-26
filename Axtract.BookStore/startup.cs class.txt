@@ -1,0 +1,96 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+
+namespace FirstConsoleApplication
+{
+    public class Startup
+    {
+        public void ConfigurationServies(IServiceCollection services)
+        {
+            services.AddControllersWithViews();
+        }
+
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment evn)  //this class is used as a Middle Wear(Which is used in the http cal)
+        {
+            if(evn.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            app.UseRouting();   //to map the url to a particular resource
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapDefaultControllerRoute();
+
+                //use for the default routing(means that get address of home contoller to execute the original website
+            });
+            ////endpoints.Map("/", async context =>   //here we are mappuing a url from a particular resource
+            //                                      //MAP GET will only handle the get requests which are coming for this particular route
+            //                                      //MAP handle all the requests that are coming from that particular requests
+            //{
+            //    if (evn.IsDevelopment())            //Also use as if(evn.IsEnvironment("Development) or if(evn.EnvironmentName == "Development")
+            //    {
+            //        await context.Response.WriteAsync("Hello from Development");
+            //    }
+
+            //    else if (evn.IsProduction())
+            //    {
+            //        await context.Response.WriteAsync("Hello from Production");
+            //    }
+
+            //    else if (evn.IsStaging())
+            //    {
+            //        await context.Response.WriteAsync("Hello from Staging");
+            //    }
+            //    else
+            //    {
+            //        await context.Response.WriteAsync(evn.EnvironmentName);
+            //    }
+
+
+            //});
+
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.Map("/ali", async context =>   //here we are mappuing a url from a particular resource
+            //                                             //MAP GET will only handle the get requests which are coming for this particular route
+            //                                             //MAP handle all the requests that are coming from that particular requests
+            //    {
+            //        await context.Response.WriteAsync("       Hello ali from the Axtract Software house");
+            //    });
+            //});
+
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("Hello from my First Middleware.");
+
+            //    await next();
+
+            //    await context.Response.WriteAsync("        Hello from my First Middleware Response.");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("         Hello from my Second Middleware.");
+
+            //    await next();
+
+            //    await context.Response.WriteAsync("        Hello from my Second Middleware Response.");
+            //});
+
+            //app.Use(async (context, next) =>
+            //{
+            //    await context.Response.WriteAsync("         Hello from my Third Middleware.");
+
+            //    await next();
+            //});
+            //}
+
+        }
+    }
+}
